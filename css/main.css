@@ -15,6 +15,9 @@
 	font-family: doloman_f;
 	src: url(../fonts/DolomanPavljenko.otf);
 }
+::-webkit-scrollbar {
+  display: none;
+}
 body{
 	background-color: #010101;
 	color: white;
@@ -39,20 +42,46 @@ body{
 		position: absolute;
 		background-size: cover;
 		background-position: center;
+		will-change: transform;
+		z-index: 2;
 	}
 	.layers__base{
 		transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+		z-index: 0;
 	}
 	.layers__far{
-		transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+		transform: translate3d(0, calc(var(--scrollTop) / 2.3), 0);
 	}
 	.layers__middle{
-		transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
+		transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
 	}
 	.layers__front{
-		transform: translate3d(0, calc(var(--scrollTop) / 20), 0);
+		transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
 	}
+	.layers__title{
+		transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+		font-size: 100px;
+		will-change: transform;
+		text-transform: uppercase;
+		z-index: 1;
+		color: whitesmoke;
+		letter-spacing: 35px;
+	}
+
+
+
+
 	.main-article{
 		min-height: 100vh;
 		background-size: cover;
+	}
+	.main-article__content{
+		position: relative;
+		text-align: center;
+		align-items: center;
+	}
+	.main-article__header{
+		font-size: 50px;
+		text-transform: uppercase;
+		justify-content: center;
 	}
